@@ -32,7 +32,6 @@ $('#form-reg').on('submit', function (e) {
         if (res.status != 0) {
             return layer.msg(res.message);
         }
-        console.log('注册成功');
         layer.msg('注册成功');
         $('#link-login').click()
     })
@@ -53,7 +52,7 @@ $('#form-login').on('submit', function (e) {
             // 储存token
             localStorage.setItem('token', res.token)
             // 跳转页面
-            // location.href = '/index.html'
+            location.href = '/index.html'
         }
     })
 })
